@@ -56,4 +56,4 @@ if __name__ == '__main__':
     app = create_flask_app()
     db.init_app(app)
     db.create_all()
-    app.run()
+    app.run(debug=True, port=8000)
