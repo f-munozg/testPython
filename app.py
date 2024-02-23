@@ -49,9 +49,9 @@ def add_urls(app):
     api.add_resource(VistaBancos, '/bancos')
     api.add_resource(VistaTipoMovimientos, '/tipo-movimientos')
 
+app = create_flask_app()
+db.init_app(app)
+db.create_all()
 
 if __name__ == '__main__':
-    app = create_flask_app()
-    db.init_app(app)
-    db.create_all()
     app.run()
