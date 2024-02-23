@@ -14,8 +14,6 @@ from vistas.login import VistaLogIn
 from modelos import db, Usuario
 from vistas.tipo_movimientos import VistaTipoMovimientos
 
-app = None
-
 def create_flask_app():
     app = Flask(__name__)
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///admon_reservas.db'
